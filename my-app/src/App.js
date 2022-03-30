@@ -12,14 +12,14 @@ import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 
-function App() {   
+function App() {        //react functional component or root component 
   return (
   <div>
-    <Router>
+    <Router>                   
       <HeaderComponent/>
       <div className="container">
         <Switch>
-          <Route path = "/" exact component ={ListEmployeeComponent}></Route>
+          <Route path = "/" exact component ={ListEmployeeComponent}></Route>    
           <Route path = "/employees" component ={ListEmployeeComponent} ></Route>
           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
+
+//create classes using rcc- install react snippets
 class ListEmployeeComponent extends Component {
     constructor(props) {
         super(props)
         
-        this.state = {
+        this.state = {                              //state is a plain javascript object and contains data specific to the component 
             employees : []   //initialise an array
         }
         this.addEmployee = this.addEmployee.bind(this);
@@ -28,7 +30,7 @@ class ListEmployeeComponent extends Component {
      }
 
     componentDidMount(){
-        EmployeeService.getEmployees().then((res) => {
+        EmployeeService.getEmployees().then((res) => {    //returns a promise
           this.setState({employees : res.data});
         });
     }
